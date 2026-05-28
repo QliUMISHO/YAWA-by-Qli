@@ -1,0 +1,44 @@
+# Environment / secrets
+.env
+.env.*
+config.php
+database.php
+credentials.php
+secrets.php
+
+# Logs
+*.log
+logs/
+storage/logs/
+
+# PHP dependencies
+/vendor/
+
+# Node dependencies
+/node_modules/
+dist/
+build/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# Asterisk / certificates / keys
+*.key
+*.pem
+*.crt
+certs/
+keys/
+
+# Uploads / runtime files
+uploads/
+runtime/
+cache/
+sessions/
