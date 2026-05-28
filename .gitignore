@@ -6,6 +6,10 @@ database.php
 credentials.php
 secrets.php
 
+# Local runtime configs
+backend/local.php
+backend/config.local.php
+
 # Logs
 *.log
 logs/
@@ -25,7 +29,7 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Temp
+# Temp files
 *.tmp
 *.bak
 *.swp
@@ -42,3 +46,7 @@ uploads/
 runtime/
 cache/
 sessions/
+
+# Asterisk real production files
+asterisk/*.real.conf
+asterisk/*production*.conf

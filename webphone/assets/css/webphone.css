@@ -1,0 +1,329 @@
+:root {
+    --bg: #0b1020;
+    --panel: #111827;
+    --panel-2: #1f2937;
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+    --line: rgba(255, 255, 255, 0.08);
+    --green: #22c55e;
+    --red: #ef4444;
+    --blue: #3b82f6;
+    --yellow: #f59e0b;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: radial-gradient(circle at top left, #1d4ed8 0, transparent 30%),
+                radial-gradient(circle at bottom right, #7c3aed 0, transparent 28%),
+                var(--bg);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.app-shell {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+}
+
+.side-panel {
+    background: rgba(17, 24, 39, 0.88);
+    border-right: 1px solid var(--line);
+    padding: 24px;
+    backdrop-filter: blur(18px);
+}
+
+.brand-box {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+}
+
+.brand-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, var(--blue), #8b5cf6);
+    font-size: 20px;
+}
+
+.brand-title {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+}
+
+.brand-subtitle {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.account-card,
+.status-card {
+    background: rgba(31, 41, 55, 0.72);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.label {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 6px;
+}
+
+.form-control {
+    background: #0f172a;
+    border: 1px solid var(--line);
+    color: var(--text);
+}
+
+.form-control:focus {
+    background: #0f172a;
+    color: var(--text);
+    border-color: var(--blue);
+    box-shadow: none;
+}
+
+.status-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 13px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.status-row:last-child {
+    border-bottom: 0;
+}
+
+.status-row span {
+    color: var(--muted);
+}
+
+.side-actions {
+    margin-top: 18px;
+}
+
+.main-panel {
+    padding: 34px;
+    display: grid;
+    grid-template-columns: minmax(360px, 520px) 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.call-card,
+.log-card {
+    background: rgba(17, 24, 39, 0.84);
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(18px);
+}
+
+.call-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: flex-start;
+    margin-bottom: 22px;
+}
+
+.call-header h1 {
+    font-size: 28px;
+    margin: 0;
+    font-weight: 800;
+}
+
+.call-header p {
+    color: var(--muted);
+    margin: 6px 0 0;
+    font-size: 13px;
+}
+
+.call-state {
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    border: 1px solid var(--line);
+}
+
+.call-state.idle {
+    color: var(--muted);
+}
+
+.call-state.registered {
+    color: var(--green);
+}
+
+.call-state.calling,
+.call-state.ringing {
+    color: var(--yellow);
+}
+
+.call-state.active {
+    color: var(--green);
+}
+
+.call-state.failed {
+    color: var(--red);
+}
+
+.number-display {
+    margin-bottom: 18px;
+}
+
+.number-display input {
+    height: 56px;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.dialpad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.dial-key {
+    height: 72px;
+    border-radius: 18px;
+    border: 1px solid var(--line);
+    background: rgba(31, 41, 55, 0.9);
+    color: var(--text);
+    font-size: 26px;
+    font-weight: 800;
+    outline: none;
+    transition: transform 0.12s ease, background 0.12s ease;
+}
+
+.dial-key span {
+    display: block;
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 2px;
+    font-weight: 700;
+}
+
+.dial-key:hover {
+    transform: translateY(-1px);
+    background: rgba(55, 65, 81, 0.95);
+}
+
+.call-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin: 24px 0 16px;
+}
+
+.btn-call,
+.btn-answer,
+.btn-hangup {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    color: white;
+    font-size: 22px;
+}
+
+.btn-call {
+    background: var(--green);
+}
+
+.btn-answer {
+    background: var(--blue);
+}
+
+.btn-hangup {
+    background: var(--red);
+}
+
+.secondary-actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.log-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.log-header h2 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 800;
+}
+
+.log-box {
+    height: 640px;
+    overflow: auto;
+    background: #020617;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 12px;
+    font-family: Consolas, Monaco, monospace;
+    font-size: 12px;
+}
+
+.log-line {
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    color: #cbd5e1;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.log-line .time {
+    color: #64748b;
+}
+
+.log-line.info .level {
+    color: #38bdf8;
+}
+
+.log-line.warn .level {
+    color: #f59e0b;
+}
+
+.log-line.error .level {
+    color: #f87171;
+}
+
+.log-line.debug .level {
+    color: #a78bfa;
+}
+
+@media (max-width: 1100px) {
+    .app-shell {
+        grid-template-columns: 1fr;
+    }
+
+    .side-panel {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+    }
+
+    .main-panel {
+        grid-template-columns: 1fr;
+    }
+}
