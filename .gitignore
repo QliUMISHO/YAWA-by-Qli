@@ -1,4 +1,4 @@
-# Environment / secrets
+# Secrets
 .env
 .env.*
 config.php
@@ -11,33 +11,33 @@ secrets.php
 logs/
 storage/logs/
 
-# PHP dependencies
-/vendor/
+# Dependencies
+vendor/
+node_modules/
 
-# Node dependencies
-/node_modules/
+# Build output
 dist/
 build/
 
-# OS/editor files
+# OS/editor
 .DS_Store
 Thumbs.db
 .vscode/
 .idea/
 
-# Temporary files
+# Temp
 *.tmp
 *.bak
 *.swp
 
-# Asterisk / certificates / keys
+# SSL/private keys
 *.key
 *.pem
 *.crt
 certs/
 keys/
 
-# Uploads / runtime files
+# Runtime
 uploads/
 runtime/
 cache/
